@@ -1,3 +1,12 @@
+document.getElementById('issueInputForm').addEventlistener('submit', saveIssue);
+
+function saveIssue(e)
+{
+	var issueDesc = document.getElementById('issueDescInput').value;
+	var issueSeverity = document.getElementById('issueSeverityInput').value;
+	var issueAssignedTo = document.getElementById('issueAssignedToInput').value;
+}
+
 function fetchIssues() {
 	var issues = JSON.parse(localStorage.getItem('issues'));
 	var issuesList = document.getElementById('issuesList');
