@@ -1,4 +1,4 @@
-document.getElementById('issueInputForm').addEventlistener('submit', saveIssue);
+document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
 
 function saveIssue(e)
 {
@@ -29,6 +29,12 @@ function saveIssue(e)
 		issues.push(issue);
 		localStorage.setItem('issues', JSON.stringify(issues));
 	}
+
+	document.getElementById('issueInputForm').reset();
+
+	fetchIssues(); 
+
+	e.preventDefault();
 }
 
 function fetchIssues() {
